@@ -20,10 +20,10 @@ Some important git command
 Resolve conflict : https://swcarpentry.github.io/git-novice/09-conflict/
 
 4. Pull only one file from git(not sure, need to test)
-git fetch
-git checkout -m <revision> <yourfilepath>
-git add <yourfilepath>
-git commit
+- git fetch
+- git checkout -m <revision> <yourfilepath>
+- git add <yourfilepath>
+- git commit
  
 Regarding the git checkout command: <revision> - a branch name, i.e. origin/master <yourfilepath> does not include the repository name (that you can get from clicking copy path button on a file page on GitHub), i.e. README.md
 
