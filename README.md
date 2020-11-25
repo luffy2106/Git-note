@@ -19,7 +19,7 @@ Some important git command
 * git merge
 Resolve conflict : https://swcarpentry.github.io/git-novice/09-conflict/
 
-4. Pull only one file from git(not sure, need to test)
+4. Pull only one file from git(not sure, need to test)  
 git fetch  
 git checkout -m <revision> <yourfilepath>  
 git add <yourfilepath>  
