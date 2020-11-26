@@ -27,3 +27,7 @@ git commit
  
 Regarding the git checkout command: <revision> - a branch name, i.e. origin/master <yourfilepath> does not include the repository name (that you can get from clicking copy path button on a file page on GitHub), i.e. README.md
 
+5. Add files to staging areas(index)  
+- stage all(new, modified, deleted) files : git add -A  
+- stage new and modifed files only : git add .  
+- stage modified and deleted files only: git add -u  
