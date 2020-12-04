@@ -39,19 +39,19 @@ Regarding the git checkout command: <revision> - a branch name, i.e. origin/mast
 2.1 non-fast-forward errors
 
 2.1.1 Example  
-C:\Test_solution\Pandas\just-pandas-things>git push
-To https://github.com/luffy2106/pandas.git
- ! [rejected]        main -> main (non-fast-forward)
-error: failed to push some refs to 'https://github.com/luffy2106/pandas.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+C:\Test_solution\Pandas\just-pandas-things>git push  
+To https://github.com/luffy2106/pandas.git  
+ ! [rejected]        main -> main (non-fast-forward)  
+error: failed to push some refs to 'https://github.com/luffy2106/pandas.git'  
+hint: Updates were rejected because the tip of your current branch is behind  
+hint: its remote counterpart. Integrate the remote changes (e.g.  
+hint: 'git pull ...') before pushing again.  
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.  
 
-2.1.2 Cause
+2.1.2 Cause  
 The reason behind this error is your local commit branch and remote commit branch is different. You can check by type 'git status' or use command in section 1.6 to see in detail. This error might come from the fact that you modify the remote branch by another computer or direcly edit in the website of git, and you forget to do 'git pull' before adding new commit and pushing.
 
-2.1.3 Solution
+2.1.3 Solution  
 Do git fetch or git pull before doing anything
 
 
