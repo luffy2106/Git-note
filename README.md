@@ -32,7 +32,10 @@ Regarding the git checkout command: <revision> - a branch name, i.e. origin/mast
 
 1.6 Show the commit history : git log  
 - To show the commit history in local(with graph) : git log --graph
-- To show the commit history in remote(with graph) : git log --graph --remote
+- To show the commit history in remote(with graph) : git log --graph --remotes
+
+1.7 Delete the last commit(in local)  
+- git reset HEAD~1 (you can use 2 or 3 .. if you want to delete the last 2,3 .. commit  
 
 2. Some popular errors we might encounter
 
@@ -52,7 +55,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 The reason behind this error is your local commit branch and remote commit branch is different. You can check by type 'git status' or use command in section 1.6 to see in detail. This error might come from the fact that you modify the remote branch by another computer or direcly edit in the website of git, and you forget to do 'git pull' before adding new commit and pushing.
 
 2.1.3 Solution  
-Do git fetch or git pull before doing anything
+Do git fetch or git pull before doing anything(it's not true, need to update)
 
 
 
