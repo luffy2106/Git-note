@@ -54,7 +54,8 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 2.1.2 Cause  
 The reason behind this error is your local commit branch and remote commit branch is different. You can check by type 'git status' or use command in section 1.6 to see in detail. This error might come from the fact that you modify the remote branch by another computer or direcly edit in the website of git, and you forget to do 'git pull' before adding new commit and pushing.
 
-2.1.3 How to fix
+2.1.3 How to fix 
+
 Use command in section 1.6 to see the difference between local index and remote index. If the local index is one step more than remote index, we need to either:
 - Come back to the previous commit by command in 1.7 then git pull before modify code then git push later.
 - Using git merge to merge the local index and remote index
