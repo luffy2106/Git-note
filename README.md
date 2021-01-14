@@ -1,7 +1,12 @@
 # Git-note
 
 1.Some important git command
-1.1 Create a new branch
+
+1.0 Track remote branch(make branch visible in local) 
+- To track all branchs : remote=origin ; for brname in `git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/[^\/]+\//,"",$1); print $1}'`; do git branch --track $brname $remote/$brname  ; done
+- To track one branch at a time : git checkout --track origin/branch-name 
+
+1.1 Create a new branch 
 - To create new branch on Local 
   * git checkout -b [name_of_your_new_branch]
 - To create new branch on remote
