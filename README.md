@@ -42,6 +42,9 @@ Regarding the git checkout command: <revision> - a branch name, i.e. origin/mast
 1.7 Delete the last commit(in local)  
 - git reset HEAD~1 (you can use 2 or 3 .. if you want to delete the last 2,3 .. commit  
 
+1.8 Unstage a file(remove file from staging area)  
+- git restore --staged <file-name> or git rm --cached <file-name>  
+ 
 2. Some popular errors we might encounter
 
 2.1 non-fast-forward errors
