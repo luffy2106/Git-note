@@ -19,8 +19,9 @@
   * git checkout -- .
 
 1.3 Join two or more development histories together
-* git merge
-Resolve conflict : https://swcarpentry.github.io/git-novice/09-conflict/
+* git merge  
+Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. If the repo of remote branch is ahead the repo of local branch, then there will be no conflict. Otherwise we have to solve conflict to merge. To be resolve conflict :   
+https://swcarpentry.github.io/git-novice/09-conflict/
 
 1.4 Pull only one file from git(not sure, need to test)  
 git fetch  
@@ -44,7 +45,20 @@ Regarding the git checkout command: <revision> - a branch name, i.e. origin/mast
 
 1.8 Unstage a file(remove file from staging area)  
 - git restore --staged <file-name> or git rm --cached <file-name>  
- 
+
+1.9 The difference between git fetch and git pull 
+1.9.1 Git fetch  
+Command : Git fetch origin <name_of_the_branch>  
+Reference : https://www.atlassian.com/git/tutorials/syncing/git-fetch
+- Download all the history from remote resporitory to local repo and keep track by a short-lived ref FETCH_HEAD(you will see after you type command) 
+- Ref FETCH_HEAD isolates fetched content from existing local content; it has absolutely no effect on your local development work.
+- Then if you want your local respo is the same as the remote respo, simply do git merge, it will merging FETCH_HEAD into the current branch. If there is no conflict, the result is exactly what you'd expect: the commit at the tip of the appropriate remote branch is merged into the commit at the tip of your current branch. 
+
+1.9.2 Git pull 
+Referecen : https://www.atlassian.com/git/tutorials/syncing/git-pull 
+- Git pull is just the combination of git fetch and git merge. The git pull command first runs git fetch which downloads content from the specified remote repository. Then a git merge is executed to merge the remote content refs and heads into a new local merge commit.
+
+2.0 
 2. Some popular errors we might encounter
 
 2.1 non-fast-forward errors
@@ -74,3 +88,10 @@ Do git fetch or git pull before doing anything(it's not true, need to update)
 
 
 
+
+
+
+
+Note:
+- In the new version, original "master" branch was renamed to "main"
+- HEAD is a pointer which point to the current branch. When HEAD point to a single commit on a branch, for example on 527f799, It will show something like "(HEAD detached at 527f799)", and all other commits before this commit is in HEAD and other commits after this commit is not in HEAD.
