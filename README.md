@@ -94,4 +94,4 @@ Do git fetch or git pull before doing anything(it's not true, need to update)
 
 Note:
 - In the new version, original "master" branch was renamed to "main"
-- HEAD is a pointer which point to the current branch. When HEAD point to a single commit on a branch, for example on 527f799, It will show something like "(HEAD detached at 527f799)", and all other commits before this commit is in HEAD and other commits after this commit is not in HEAD.
+- HEAD is a pointer which point to the current branch. When HEAD point to a single commit on a branch, for example on 527f799, It will show something like "(HEAD detached at 527f799)", and all other commits ahead this commit is in HEAD and other commits behind this commit is not in HEAD.
