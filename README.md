@@ -83,7 +83,7 @@ Use command in section 1.6 to see the difference between local index and remote 
 - Using git merge to merge the local index and remote index
 
 2.1.4 Tips to avoid in the future  
-Do git fetch or git pull before doing anything(it's not true, need to update)
+Do git fetch or git pull before doing anything.
 
 
 
@@ -94,4 +94,5 @@ Do git fetch or git pull before doing anything(it's not true, need to update)
 
 Note:
 - In the new version, original "master" branch was renamed to "main"
-- HEAD is a pointer which point to the current branch. When HEAD point to a single commit on a branch, for example on 527f799, It will show something like "(HEAD detached at 527f799)", and all other commits ahead this commit is in HEAD and other commits behind this commit is not in HEAD.
+- HEAD is Git’s way of referring to the current snapshot or a pointer. Internally, the git checkout command simply updates the HEAD to point to either the specified branch or commit. When it points to a branch, Git doesn't complain, but when you check out a commit, it switches into a “detached HEAD” state. To be more specific :  
+When HEAD point to a single commit on a branch, for example on 527f799, It will show something like "(HEAD detached at 527f799)", and all other commits ahead this commit is in HEAD and other commits behind this commit is not in HEAD.
