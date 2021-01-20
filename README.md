@@ -25,7 +25,7 @@ Git merge will combine multiple sequences of commits into one unified history. I
 https://swcarpentry.github.io/git-novice/09-conflict/
 
 Command :     
-- Merge 2 branch in local repo : git merge <name of branch need to merge to current branch>.
+- Merge 2 branch in local repo : git merge [name of branch need to merge to current branch]
 - Merge local branch to remote branch : git merge  
 
 Prepare to merge to avoid conflict:
