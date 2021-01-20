@@ -19,14 +19,14 @@
   * git checkout -- .
 
 1.3 Join two or more development histories together(git merge)  
-
 Reference : https://www.atlassian.com/git/tutorials/using-branches/git-merge  
+
+Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. If the repo of remote branch is ahead the repo of local branch, then there will be no conflict. Otherwise we have to solve conflict to merge. To be resolve conflict :   
+https://swcarpentry.github.io/git-novice/09-conflict/
 
 Command :     
 - Merge 2 branch in local repo : git merge <name of branch need to merge to current branch>.
-- Merge local branch to remote branch : git merge
-Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. If the repo of remote branch is ahead the repo of local branch, then there will be no conflict. Otherwise we have to solve conflict to merge. To be resolve conflict :   
-https://swcarpentry.github.io/git-novice/09-conflict/
+- Merge local branch to remote branch : git merge  
 
 Prepare to merge to avoid conflict:
 - Confirm the receiving branch : Execute git status to ensure that HEAD is pointing to the correct merge-receiving branch
