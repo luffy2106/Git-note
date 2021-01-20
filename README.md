@@ -28,7 +28,8 @@ https://swcarpentry.github.io/git-novice/09-conflict/
 
 Prepare to merge to avoid conflict:
 - Confirm the receiving branch : Execute git status to ensure that HEAD is pointing to the correct merge-receiving branch
-- Fetch latest remote commits : Make sure the receiving branch and the merging branch are up-to-date with the latest remote changes
+- Fetch latest remote commits : Make sure the receiving branch and the merging branch are up-to-date with the latest remote changes 
+
 There are 2 ways of merging:  
 1.3.1 Fast Forward Merge
 
