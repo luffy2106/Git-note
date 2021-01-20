@@ -18,8 +18,10 @@
 - To restore everything
   * git checkout -- .
 
-1.3 Join two or more development histories together(git merge)
-Reference : https://www.atlassian.com/git/tutorials/using-branches/git-merge
+1.3 Join two or more development histories together(git merge)  
+
+Reference : https://www.atlassian.com/git/tutorials/using-branches/git-merge  
+
 Command :     
 - Merge 2 branch in local repo : git merge <name of branch need to merge to current branch>.
 - Merge local branch to remote branch : git merge
