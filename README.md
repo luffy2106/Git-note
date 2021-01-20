@@ -18,10 +18,28 @@
 - To restore everything
   * git checkout -- .
 
-1.3 Join two or more development histories together
-* git merge  
+1.3 Join two or more development histories together(git merge)
+Reference : https://www.atlassian.com/git/tutorials/using-branches/git-merge
+Command :     
+- Merge 2 branch in local repo : git merge <name of branch need to merge to current branch>.
+- Merge local branch to remote branch : git merge
 Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. If the repo of remote branch is ahead the repo of local branch, then there will be no conflict. Otherwise we have to solve conflict to merge. To be resolve conflict :   
 https://swcarpentry.github.io/git-novice/09-conflict/
+
+Prepare to merge to avoid conflict:
+- Confirm the receiving branch : Execute git status to ensure that HEAD is pointing to the correct merge-receiving branch
+- Fetch latest remote commits : Make sure the receiving branch and the merging branch are up-to-date with the latest remote changes
+There are 2 ways of merging:  
+1.3.1 Fast Forward Merge
+
+A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. In this case, there will be no conflict.   
+1.3.2 3-way merge   
+
+However, a fast-forward merge is not possible if the branches have diverged. When there is not a linear path to the target branch, Git has no choice but to combine them via a 3-way merge. 3-way merges use a dedicated commit to tie together the two histories. The nomenclature comes from the fact that Git uses three commits to generate the merge commit: the two branch tips and their common ancestor. In 3-way merge sometime there will be conflict if the state of each file in 2 branches is different(It will show something like : Automatic merge failed; fix conflicts and then commit the result.), what we have to do is :
+- Solve the conflict.
+- Add file which was sloved conflict to index.
+- Run a normal git commit to generate the merge commit.
+- Type git merge again.
 
 1.4 Pull only one file from git(not sure, need to test)  
 git fetch  
