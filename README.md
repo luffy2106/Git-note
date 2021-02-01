@@ -6,11 +6,13 @@
 - To track all branchs : remote=origin ; for brname in `git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/[^\/]+\//,"",$1); print $1}'`; do git branch --track $brname $remote/$brname  ; done
 - To track one branch at a time : git checkout --track origin/branch-name 
 
-1.1 Create a new branch 
+1.1 Git checkout 
 - To create new branch on Local 
   * git checkout -b [name_of_your_new_branch]
 - To create new branch on remote
   * git push --set-upstream origin [name_of_your_new_branch]
+- Sometimes there is 2 branch with different files and you want to switch between them(in other words, the index of the working tree differs from HEAD or you have un-staged chanes)    
+  * git checkout -f branch_name    
 
 1.2 Restore files back to the state of repository
 - To restore one file
@@ -79,7 +81,10 @@ Reference : https://www.atlassian.com/git/tutorials/syncing/git-fetch
 Referecen : https://www.atlassian.com/git/tutorials/syncing/git-pull 
 - Git pull is just the combination of git fetch and git merge. The git pull command first runs git fetch which downloads content from the specified remote repository. Then a git merge is executed to merge the remote content refs and heads into a new local merge commit.
 
-2.0 
+
+
+
+
 2. Some popular errors we might encounter
 
 2.1 non-fast-forward errors
