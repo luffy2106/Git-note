@@ -11,7 +11,7 @@
   * git checkout -b [name_of_your_new_branch]
 - To create new branch on remote
   * git push --set-upstream origin [name_of_your_new_branch]
-- Sometimes there is 2 branch with different files and you want to switch between them(in other words, the index of the working tree differs from HEAD or you have un-staged chanes)    
+- Sometimes there is 2 branch with different files and you want to switch between them(in other words, the index of the working tree differs from HEAD or you have un-staged changes)    
   * git checkout -f branch_name    
 
 1.2 Restore files back to the state of repository
