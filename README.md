@@ -3,8 +3,10 @@
 1.Some important git command
 
 1.0 Track remote branch(make branch visible in local) 
-- To track all branchs : remote=origin ; for brname in `git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/[^\/]+\//,"",$1); print $1}'`; do git branch --track $brname $remote/$brname  ; done
-- To track one branch at a time : git checkout --track origin/branch-name 
+- To track all branchs :  
+for i in `git branch -a | grep remote | grep -v HEAD | grep -v master`; do git branch --track ${i#remotes/origin/} $i; done
+- To track one branch at a time :   
+git checkout --track origin/branch-name 
 
 1.1 Git checkout 
 - To create new branch on Local 
