@@ -80,11 +80,12 @@ Reference : https://www.atlassian.com/git/tutorials/syncing/git-fetch
 - Then if you want your local respo is the same as the remote respo, simply do git merge, it will merging FETCH_HEAD into the current branch. If there is no conflict, the result is exactly what you'd expect: the commit at the tip of the appropriate remote branch is merged into the commit at the tip of your current branch. 
 
 1.9.2 Git pull 
-Referecen : https://www.atlassian.com/git/tutorials/syncing/git-pull 
+Reference : https://www.atlassian.com/git/tutorials/syncing/git-pull 
 - Git pull is just the combination of git fetch and git merge. The git pull command first runs git fetch which downloads content from the specified remote repository. Then a git merge is executed to merge the remote content refs and heads into a new local merge commit.
 
-
-
+1.10 Git stash
+Good Reference:
+- https://cafedev.vn/tu-hoc-git-lenh-git-stash/?fbclid=IwAR1r9HHeUd6brsRJKOkMeAZ2hADFakrh6csOhqBfD0kxr_9SvpRJ_blxeyg
 
 
 2. Some popular errors we might encounter
