@@ -87,7 +87,22 @@ Reference : https://www.atlassian.com/git/tutorials/syncing/git-pull
 Good Reference:
 - https://cafedev.vn/tu-hoc-git-lenh-git-stash/?fbclid=IwAR1r9HHeUd6brsRJKOkMeAZ2hADFakrh6csOhqBfD0kxr_9SvpRJ_blxeyg
 
+1.11 Git commit amend
+Update pervious unpushed commit               
 
+git commit --amend -m "New commit message" 
+
+Note that git commit --amend can only work with unpushed commit, for pushed commit it will cause conflict
+                    
+1.12 Git reset hard
+Reset to the previous state:
+git reset --hard           
+Alternatively, reset to a particular point in time, such as:
+git reset --hard master@{"10 minutes ago"}
+Reset by chose a specific state:
+git reset --hard a0d3fe6
+where a0d3fe6 is found by doing:
+git reflog                    
 2. Some popular errors we might encounter
 
 2.1 non-fast-forward errors
