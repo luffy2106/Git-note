@@ -132,7 +132,13 @@ Do git fetch or git pull before doing anything.
 
 
 
-
+2.2 Git ignore 
+Show ignore files : git status --ignored
+Add ignore files : add file name in .gitignore(only work if the file is not in tracked files, if the file is already in tracked files, 
+we need to do : git rm --cached file_name first)
+                    
+                 
+                  
 
 
 
