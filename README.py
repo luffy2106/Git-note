@@ -7,6 +7,8 @@
 for i in `git branch -a | grep remote | grep -v HEAD | grep -v master`; do git branch --track ${i#remotes/origin/} $i; done
 - To track one branch at a time :   
 git checkout --track origin/branch-name 
+- To link local branch to remote branch:
+git branch --set-upstream-to=origin/main main  (link branch main in local to the branch main remote)
 
 1.1 Git checkout 
 - To create new branch on Local 
