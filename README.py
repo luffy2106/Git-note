@@ -10,6 +10,12 @@ git checkout --track origin/branch-name
 - To link local branch to remote branch:
 git branch --set-upstream-to=origin/main main  (link branch main in local to the branch main remote)
 
+**
+To download a remote branch to local : suppose that if you have 4 branchs in remote and 1 branch in the local, you can download remote branch by doing the command:
+git checkout origin/branch_A
+git checkout branch_A
+=> now you can see branch_A in your local branchs.
+
 1.1 Git checkout 
 - To create new branch on Local 
   * git checkout -b [name_of_your_new_branch]
