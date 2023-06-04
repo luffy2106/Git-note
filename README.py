@@ -108,6 +108,27 @@ git add data_acquisition.py data_preprocessing.py
 git add data
 git commit -m "added data acquisition and preprocessing scripts"
 But you reliazed that you forgot to add file  model_training.py, then you can do "git reset --soft HEAD~1", to come back the previous commit to add the remain file.
+
+1.7.2 git reset --mixed
+This is the default argument for git reset. Running this command has two impacts: 
+(1) uncommit all the changes and 
+(2) unstage them. 
+Imagine that we accidentally added the model_training.py file, and we want to remove it because the model training is not finished yet. 
+Here is how to proceed: 
+- Unstage the files that were in the commit with git reset HEAD~n
+- Only add the files we need for the commit
+Syntax:
+- git reset HEAD~n to move back to the commit with a specific reference (n). 
+- git reset HEAD~1 gets back to the last commit.
+- git reset <commit ID> moves back to the head with the <commit ID>   
+
+1.7.3 git reset --hard
+This option has the potential of being dangerous. So, be cautious when using it! 
+Basically, when using the hard reset on a specific commit, it forces the HEAD to get back to that commit and deletes everything else after that.
+
+So if in the staging area of the previous commit has a file model_training.py, then you do "git reset --hard HEAD~1", then the file model_training.py will be delete completely 
+in both stagging area and in your folder, so please use it carefully !!!!!                                                                                          
+                                                                                               
                                                                                                 
 1.7 Delete the last commit(in local)  
 - git reset HEAD~1 (you can use 2 or 3 .. if you want to delete the last 2,3 .. commit  
