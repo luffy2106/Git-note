@@ -95,6 +95,20 @@ Regarding the git checkout command: <revision> - a branch name, i.e. origin/mast
 - To show the commit history in local(with graph) : git log --graph
 - To show the commit history in remote(with graph) : git log --graph origin/branch_name
 
+1.7 Git reset
+1.7.1 git reset --soft
+The --soft aims to change the HEAD (where the last commit is in your local machine) reference to a specific commit. 
+For instance, if we realize that we forgot to add a file to the commit, we can move back using the --soft with respect to the following format:                                                                   
+- git reset --soft HEAD~n to move back to the commit with a specific reference (n). 
+- git reset --soft HEAD~1 gets back to the last commit.
+- git reset --soft <commit ID> moves back to the head with the <commit ID>                                                                                                
+Ex : 
+You have 3 files you want to commit (data_acquisition.py data_preprocessing.py model_training.py), then you do :
+git add data_acquisition.py data_preprocessing.py
+git add data
+git commit -m "added data acquisition and preprocessing scripts"
+But you reliazed that you forgot to add file  model_training.py, then you can do "git reset --soft HEAD~1", to come back the previous commit to add the remain file.
+                                                                                                
 1.7 Delete the last commit(in local)  
 - git reset HEAD~1 (you can use 2 or 3 .. if you want to delete the last 2,3 .. commit  
 
