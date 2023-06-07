@@ -128,7 +128,23 @@ Basically, when using the hard reset on a specific commit, it forces the HEAD to
 
 So if in the staging area of the previous commit has a file model_training.py, then you do "git reset --hard HEAD~1", then the file model_training.py will be delete completely 
 in both stagging area and in your folder, so please use it carefully !!!!!                                                                                          
-                                                                                               
+
+Reference:
+```
+https://www.datacamp.com/tutorial/git-reset-revert-tutorial
+```
+1.7 Git revert 
+Git revert is similar to git reset, but the approach is slightly different. Instead of removing all the commits in its way, the revert ONLY undoes a single commit 
+by taking you back to the staged files before the commit.
+So, instead of removing a commit, git revert inverts the changes introduced by the original commit by creating a new commit with the underlying inverse content. 
+This is a safe way to revoke a commit because it prevents you from losing your history.
+Syntax:
+- git revert --no-edit <commit ID> : The --no-edit option allows the user to not change the message used for the commit you attend to revert, and this will make git revert file to master branch.
+- git revert <commit ID>
+Reference:
+```
+https://www.datacamp.com/tutorial/git-reset-revert-tutorial
+```                                                                                                
                                                                                                 
 1.7 Delete the last commit(in local)  
 - git reset HEAD~1 (you can use 2 or 3 .. if you want to delete the last 2,3 .. commit  
