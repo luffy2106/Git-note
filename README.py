@@ -145,6 +145,10 @@ Reference:
 ```
 https://www.datacamp.com/tutorial/git-reset-revert-tutorial
 ```                                                                                                
+1.7 Git rebase
+Note that git rebase only suitable when you work alone, not with the team. Git rebase work the same as git merge. The difference is :
+- Git merge merge 2 branches together but the existing branches are not changed in any way.
+- Git rebase merge 2 branches together but it become one branch after the merger, which make the history of the branch is linear. Easy to review and debug => this is the main benefit of using git rebase                                                                                               
                                                                                                 
 1.7 Delete the last commit(in local)  
 - git reset HEAD~1 (you can use 2 or 3 .. if you want to delete the last 2,3 .. commit  
