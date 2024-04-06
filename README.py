@@ -231,3 +231,9 @@ Note:
 - In the new version, original "master" branch was renamed to "main"
 - HEAD is Git’s way of referring to the current snapshot or a pointer. Internally, the git checkout command simply updates the HEAD to point to either the specified branch or commit. When it points to a branch, Git doesn't complain, but when you check out a commit, it switches into a “detached HEAD” state. To be more specific :  
 When HEAD point to a single commit on a branch, for example on 527f799, It will show something like "(HEAD detached at 527f799)", and all other commits ahead this commit is in HEAD and other commits behind this commit is not in HEAD.
+
+
+# Update git credential after change password in git
+If we change password in git in the website, probably when we push the code, we will have the authenticaion error, in this case, you should use ssh connection. Ask ChatGPT how to create token SSH then update config in local machine.
+
+Sometime Assystem network does not allow you push the code on git even using guestWifi, in this case, use 3G instead
