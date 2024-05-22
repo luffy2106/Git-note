@@ -18,15 +18,17 @@ Internet address will be git:https://github.com and you need to type in your use
 GitHub Personal Access Token => Click Ok and you are done
 
 For other OS, see the reference :
-
+```
 https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed-please-use-a-personal
-
+```
 
 1.Some important git command
 
 1.0 Track remote branch(make branch visible in local) 
-- To track all branchs :  
+- To track all branchs :
+```  
 for i in `git branch -a | grep remote | grep -v HEAD | grep -v master`; do git branch --track ${i#remotes/origin/} $i; done
+```
 - To track one branch at a time :   
 git checkout --track origin/branch-name 
 - To link local branch to remote branch:
@@ -53,11 +55,14 @@ git checkout branch_A
   * git checkout -- .
 
 1.3 Join two or more development histories together(git merge)  
-Reference : https://www.atlassian.com/git/tutorials/using-branches/git-merge  
-
-Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. If the repo of remote branch is ahead the repo of local branch, then there will be no conflict. Otherwise we have to solve conflict to merge. To be resolve conflict :   
+Reference : 
+```
+https://www.atlassian.com/git/tutorials/using-branches/git-merge  
+```
+Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches. If the repo of remote branch is ahead the repo of local branch, then there will be no conflict. Otherwise we have to solve conflict to merge. To be resolve conflict :
+```   
 https://swcarpentry.github.io/git-novice/09-conflict/
-
+```
 Command :     
 - Merge 2 branch in local repo : git merge [name of branch need to merge to current branch]
 - Merge local branch to remote branch : git merge  
@@ -170,8 +175,9 @@ Reference : https://www.atlassian.com/git/tutorials/syncing/git-pull
 
 1.10 Git stash
 Good Reference:
-- https://cafedev.vn/tu-hoc-git-lenh-git-stash/?fbclid=IwAR1r9HHeUd6brsRJKOkMeAZ2hADFakrh6csOhqBfD0kxr_9SvpRJ_blxeyg
-
+```
+https://cafedev.vn/tu-hoc-git-lenh-git-stash/?fbclid=IwAR1r9HHeUd6brsRJKOkMeAZ2hADFakrh6csOhqBfD0kxr_9SvpRJ_blxeyg
+```
 1.11 Git commit amend
 Update pervious unpushed commit               
 
